@@ -1,13 +1,13 @@
 version: '3'
-service:
+services:
   top.rating:
-  image: top-rating:latest
-  container_name: top-rating
-  restart: always
-  ports:
-    - 3000:3000
-  volumes:
-    - ./.env/opt/app/.env
+    image: top-rating:latest
+    container_name: top-rating
+    restart: always
+    ports:
+        - 3000:3000
+    volumes:
+      - ./.env:/opt/app/.env
   # mongo:
   #   image: mongo
   #   container_name: mongo
